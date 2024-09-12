@@ -24,7 +24,6 @@ export function getAllTags(navigate) {
       } catch (error) {
         console.log('GET ALL TAGS API ERROR............', error);
         toast.error('Failed to fetch tags');
-        alert('chud gaya');
       }
   
     //   dispatch(setLoading(false));

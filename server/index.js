@@ -13,7 +13,7 @@ const {cloudinaryConnect} = require("./config/cloudinary")
 dotenv.config();
 const PORT = process.env.PORT || 5000;
 
-//database connect
+//database connectpr
 database.connect();
 
 app.use(cors({ credentials: true, origin: true }));

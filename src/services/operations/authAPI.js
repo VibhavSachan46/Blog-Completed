@@ -32,7 +32,6 @@ export function login(email, password, navigate) {
             }
 
             toast.success("Login Successful")
-            // alert("sucece")
             dispatch(setToken(response.data.token))
             const userImage = response.data?.user?.image
                 ? response.data.user.image
@@ -41,9 +40,6 @@ export function login(email, password, navigate) {
 
             localStorage.setItem("token", JSON.stringify(response.data.token))
             localStorage.setItem("user", JSON.stringify(response.data.user))
-
-            // alert(JSON.stringify(response.data.token))
-            // alert(JSON.stringify(response.data.user))
 
             navigate("/")
         } catch (error) {
@@ -119,7 +115,6 @@ export function signup(
         } catch (error) {
             console.log("SIGNUP API ERROR............", error)
             toast.error("Signup Failed")
-            alert("chud gaya")
             navigate("/signup")
         }
         dispatch(setLoading(false))
